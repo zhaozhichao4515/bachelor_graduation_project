@@ -1,15 +1,12 @@
 ### 题目：
 ### 摘要
-
-
 ### 引言
 ### 开发语言和工具：
 开发环境：Mac
 开发语言： Python
 开发框架： Tensorflow
 
-
-Tensorflow
+##### Tensorflow
 Tensorlflow 是一个实现机器学习算法的接口，同是也是执行机器学习算法的框架，它的前端支持Python， C++， Go 和 Java等多种开发语言，后端使用C++， CUDA等写成。这样用户可以在一个硬件配置较好的机器中用Python开发，并在资源比较紧张的嵌入式环境和低延迟环境中用C++部署。
 Tensorflow 建立的大型深度学习模型的应用场景非常广泛，包括语音识别，自然语言处理，计算机视觉，机器人控制，信息提取，药物研发，分子活动预测等。
 Tensorflow于2015年11月在Github上开源。Tensorflow最早由Google Brain 的研究员和工程师共同开发，设计的初衷是加速机器学习的研究，并希望快速将研究原型转化为产品。次年4月补充了分布式版本，并于2017年1月发布1.0版本的预览，API接口日渐趋于稳定。
@@ -17,7 +14,6 @@ Tensorflow 使用数据流式图来规划计算流程，它可以将计算映射
 除了支持常见的网络结构：卷积神经网络(Convolutional Neural Network, CNN)和循环递归神经网络(Recurrent Neural Network, RNN)外，Tensorflow 还支持深度强化学习(Deep Reinforcement Learning)以及其他的计算密集的科学计算。新加入的XLA已经开始支持JIT和AOT，另外它使用bucketing trick可以高效的实现循环神经网络。
 2016年2月， Google 开源了 Tensorflow Serving ，这个组件可以将Tensorflow 训练好的模型导出，并部署可以对外提供预测的RESTful 接口。同时Tensorflow 也提供了 Tensorflow这一 Web 应用，用来监控Tensorflow 的运行过程。 Tensorflow 也有内置的TF.Learn和TF.Slim等上层组件可以帮助用户快速地设计网络，并且兼容Scikit Learn estimator 接口，可以方便的实现 evaluate， gird search， cross validation等功能。
 Tensorlfow 拥有产品级的高质量代码，同时 Google具有强大的开发和维护能力，Tensorflow的整体架构设计也非常优秀。因此本次毕业设计采用Tensorflow 作为深度学习框架。
-
 
 ### 可行性分析与需求分析
 ### 深度学习知识储备
@@ -86,7 +82,7 @@ VGG  U-net Pix2Pix
 
 
 
-参考文献
+### 参考文献
 [1]黄文坚, 唐源著.  Tensorflow 实战[M]- 北京， 电子工业出版社， 2017.2  
 [2]Abadi M, Agarwal A, Barham P, et al. TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems[J]. 2016.
 [3]Lecun Y, Bengio Y, Hinton G. Deep learning[J]. Nature, 2015, 521(7553):436-444.
