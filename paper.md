@@ -32,8 +32,9 @@ Tensorlfow 拥有产品级的高质量代码，同时 Google具有强大的开�
 误差函数是什么，这里使用常见的二次代价函数（quadratic cost function）：
 ![](http://latex.codecogs.com/gif.latex?C = \\frac{1}{1n}\\sum_{x}\|\|y(x)-a^{L}(x)\|\|^{2})
 其中，**x**表示输入的样本， **y**表示实际的分类，![](http://latex.codecogs.com/gif.latex?a^{L})表示预测的输出， **L**表示神经网络的最大层数。则输出层的误差可以表示为：
-![](http://latex.codecogs.com/gif.latex?\\delta^{L} = \partial C   )
-其中，![](http://latex.codecogs.com/gif.latex?\\MA\\odot\\MB被称为Hadamard乘积，用于矩阵或向量之间点对点的乘法运算。
+![](http://latex.codecogs.com/gif.latex?\\delta^{L} = \\partial C \\odot\sigma\\prime(z^{L}))
+其中，![](http://latex.codecogs.com/gif.latex?\\odot}被称为Hadamard乘积，用于矩阵或向量之间点对点的乘法运算。
+
 3. 从后向前，计算每一层神经网络产生的错误：
 
 
