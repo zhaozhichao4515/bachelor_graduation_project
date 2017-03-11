@@ -22,7 +22,24 @@ Tensorlfow 拥有产品级的高质量代码，同时 Google具有强大的开�
 
 误差逆传播（error BackPropagation,简称BP）算法是迄今为止最为成功的网络学习算法。现实任务中使用神经网络时，大多在使用BP算法进行训练。BP算法给予梯度下降(gradient descent)策略，以目标的负梯度方向对参数进行调整。BP算法执行如下操作：先将输入提供给输入层神经元，然后逐层将信号前传播，直到产生输出层的结果；然后计算输出层的误差，再将误差逆向传播至隐层神经元，最后根据隐层神经元的误差来对权重和偏置进行调整。该迭代过程循环进行，直到达到某些停止条件为止。BP算法的思想比较容易理解，现将反向传播过程推导如下所示：
 1. 前向传播
-$$2^l$$
+
+如上图所示的一个三层人工神经网络，layer1至layer3分别是输入层、隐藏层和输出层。先定义变量如下：
+![](http://latex.codecogs.com/gif.latex?w^{l})表示第**l-1**层神经元连接到第**l**层神经元的权重;![](http://latex.codecogs.com/gif.latex?b^{l})表示第**l**层神经元的偏置;(http://latex.codecogs.com/gif.latex?z^{l})表示第层神经元的输出,(http://latex.codecogs.com/gif.latex?\sigma)表示激活函数。即：
+(http://latex.codecogs.com/gif.latex?z^{l} = w^{l}a^{l-1} + b^{l};a^{l} = \sigma(z^{l}))
+
+2. 计算输出层产生的误差
+误差函数是什么，这里使用常见的二次代价函数（quadratic cost function）：
+(http://latex.codecogs.com/gif.latex?C = \frac{1}{1n}\sum_{x}\|\|y(x)-a^{L}(x)\|\|^{2})
+其中，**x**表示输入的样本， **y**表示实际的分类，(http://latex.codecogs.com/gif.latex?a^{L})表示预测的输出， **L**表示神经网络的最大层数。则输出层的误差可以表示为：
+(http://latex.codecogs.com/gif.latex?\delta^{L} = )
+        其中，表示Hadamard乘积，用于矩阵或向量之间点对点的乘法运算。
+3. 从后向前，计算每一层神经网络产生的错误：
+
+
+（4）计算权重和偏置的梯度
+
+![](http://latex.codecogs.com/gif.latex?\\})
+
         上图是一个三层人工神经网络，layer1至layer3分别是输入层、隐藏层和输出层。如图，先定义一些变量：
   表示第 l - 1层神经元连接到第l层神经元的权重； 表示第 层神经元的偏置； 
  ； 
