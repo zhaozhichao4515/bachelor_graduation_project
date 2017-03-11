@@ -26,14 +26,14 @@ Tensorlfow 拥有产品级的高质量代码，同时 Google具有强大的开�
 如上图所示的一个三层人工神经网络，layer1至layer3分别是输入层、隐藏层和输出层。先定义变量如下：
 ![](http://latex.codecogs.com/gif.latex?w^{l})表示第**l-1**层神经元连接到第**l**层神经元的权重;
 ![](http://latex.codecogs.com/gif.latex?b^{l})表示第**l**层神经元的偏置;![](http://latex.codecogs.com/gif.latex?z^{l})表示第层神经元的输出,![](http://latex.codecogs.com/gif.latex?\sigma)表示激活函数。即：
-![](http://latex.codecogs.com/gif.latex?z^{l} = w^{l}a^{l-1} + b^{l};a^{l} = \sigma(z^{l}))
+![](http://latex.codecogs.com/gif.latex?z^{l} = w^{l}a^{l-1} + b^{l};a^{l} = \\sigma(z^{l}))
 
 2. 计算输出层产生的误差
 误差函数是什么，这里使用常见的二次代价函数（quadratic cost function）：
-![](http://latex.codecogs.com/gif.latex?C = \frac{1}{1n}\sum_{x}\|\|y(x)-a^{L}(x)\|\|^{2})
+![](http://latex.codecogs.com/gif.latex?C = \\frac{1}{1n}\\sum_{x}\|\|y(x)-a^{L}(x)\|\|^{2})
 其中，**x**表示输入的样本， **y**表示实际的分类，![](http://latex.codecogs.com/gif.latex?a^{L})表示预测的输出， **L**表示神经网络的最大层数。则输出层的误差可以表示为：
-![](http://latex.codecogs.com/gif.latex?\delta^{L} = )
-        其中，表示Hadamard乘积，用于矩阵或向量之间点对点的乘法运算。
+![](http://latex.codecogs.com/gif.latex?\\delta^{L} = \partial C   )
+其中，![](http://latex.codecogs.com/gif.latex?\\MA\\odot\\MB被称为Hadamard乘积，用于矩阵或向量之间点对点的乘法运算。
 3. 从后向前，计算每一层神经网络产生的错误：
 
 
